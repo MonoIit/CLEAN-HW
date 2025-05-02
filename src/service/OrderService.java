@@ -1,6 +1,7 @@
 package service;
 
 import model.Order;
+import model.OrderInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 
 public class OrderService {
     private Scanner sc = new Scanner(System.in);
-    private List<Order> orders = new ArrayList<>();
+    private List<OrderInterface> orders = new ArrayList<>();
 
     public boolean makeOrder(CartService cart) {
 
@@ -29,7 +30,7 @@ public class OrderService {
             System.out.println("You have no orders");
             return;
         }
-        for (Order order : orders) {
+        for (OrderInterface order : orders) {
             System.out.println(order);
         }
     }

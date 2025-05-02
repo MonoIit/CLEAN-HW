@@ -5,7 +5,7 @@ import service.CartService;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Order {
+public class Order implements OrderInterface {
     private long orderId;
     private long userId;
     private boolean status;

@@ -1,0 +1,6 @@
+1. Принцип S соблюдается в классе [CartService](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/CartService.java#L8). Хоть технически и можно реализовать создание заказа в этом классе, этим должен заниматься другой класс — OrderService.
+2. Принцип O соблюдается в классах [Apples](https://github.com/MonoIit/CLEAN-HW/blob/main/src/model/Apples.java#L3) , [Milk](https://github.com/MonoIit/CLEAN-HW/blob/main/src/model/Milk.java#L3), [Bread](https://github.com/MonoIit/CLEAN-HW/blob/main/src/model/Bread.java#L3). Наследуясь от класса [SimpleGood](https://github.com/MonoIit/CLEAN-HW/blob/main/src/model/simpleGood.java#L3), мы не урезаем его функциональность, а расширяем её добавлением конструктора.
+3. Принцип L соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/Catalog.java#L12) - классы Apple, Milk, Bread только расширяют функционал класса simpleGood, поэтому где можно использовать simpleGood, там можно использовать классы Aplle, Milk, Bread.
+4. Принцип D соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/OrderService.java#L12). OrderInterface - это просто интерфейс, а класс Order его реализует.
+5. Принцип избегания магических чисел соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/Catalog.java#L17).
+

@@ -3,4 +3,5 @@
 3. Принцип L соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/Catalog.java#L12) - классы Apple, Milk, Bread только расширяют функционал класса simpleGood, поэтому где можно использовать simpleGood, там можно использовать классы Aplle, Milk, Bread.
 4. Принцип D соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/OrderService.java#L12). OrderInterface - это просто интерфейс, а класс Order его реализует.
 5. Принцип избегания магических чисел соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/Catalog.java#L17).
+6. Принцип DRY соблюдается [здесь](https://github.com/MonoIit/CLEAN-HW/blob/main/src/service/Catalog.java#L39). Чтобы постоянно не писать ```goods.get(choiceProduct)``` вынесем результат выполнения в отдельную переменную.
 

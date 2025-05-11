@@ -35,13 +35,15 @@ public class Catalog {
         }
         choiceProduct--;
 
-        goods.get(choiceProduct).showOptions();
+
+        Good chosenGood = goods.get(choiceProduct);
+        chosenGood.showOptions();
         choiceOption = sc.nextInt();
         if (choiceOption == 1) {
-            System.out.println("Enter number of " + goods.get(choiceProduct).getName() + " you want");
+            System.out.println("Enter number of " + chosenGood.getName() + " you want");
             int choiceNumber = sc.nextInt();
-            cart.addProduct(goods.get(choiceProduct), choiceNumber);
-            System.out.println(goods.get(choiceProduct).getName() + " added");
+            cart.addProduct(chosenGood, choiceNumber);
+            System.out.println(chosenGood.getName() + " added");
         }
         else if (choiceOption == 2) {
             int rate;
@@ -51,7 +53,7 @@ public class Catalog {
                 System.out.println("Invalid rate");
                 return;
             }
-            goods.get(choiceProduct).rate(rate);
+            chosenGood.rate(rate);
         }
 
     }
